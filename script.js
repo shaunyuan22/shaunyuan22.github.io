@@ -164,10 +164,9 @@ function loadPublications() {
         .then(publications => {
             console.log('Loaded publications:', publications.length);
             
-            // Filter publications to show on homepage based on showOnHomepage flag
             let pubsToShow = publications;
             
-            // Sort by year descending (Preprints/Missing year at top)
+            // Sort by year descending
             pubsToShow.sort((a, b) => {
                 const yearA = a.year ? parseInt(a.year) : 9999;
                 const yearB = b.year ? parseInt(b.year) : 9999;
@@ -184,7 +183,6 @@ function loadPublications() {
                 pubsByYear[year].push(pub);
             });
 
-            // Get sorted years
             const sortedYears = Object.keys(pubsByYear).sort((a, b) => {
                 if (a === 'Preprint') return -1;
                 if (b === 'Preprint') return 1;
@@ -196,29 +194,31 @@ function loadPublications() {
                 const yearGroup = document.createElement('div');
                 yearGroup.className = 'pub-year-group';
 
-                // Year Header
                 const yearHeader = document.createElement('h3');
                 yearHeader.className = 'pub-year-header';
                 yearHeader.textContent = `-${year}-`;
                 yearGroup.appendChild(yearHeader);
 
-                // List
                 const ul = document.createElement('ul');
                 ul.className = 'pub-list-ul';
 
                 pubsByYear[year].forEach(pub => {
                     const li = document.createElement('li');
-                    li.className = 'pub-list-item';
+                    // 修改：让 li 变成垂直排列 (flex-col)，这样 MainRow 和 BibBox 就会上下排列
+                    li.className = 'pub-list-item flex flex-col items-start gap-2'; 
 
-                    // Wrapper for text content to allow side-by-side layout with thumbnail
+                    // --- 创建 MainRow: 包含原本的文字内容和图片 ---
+                    const mainRow = document.createElement('div');
+                    mainRow.className = 'flex w-full justify-between gap-4'; // 横向排列，撑满宽度
+
+                    // Wrapper for text content
                     const contentWrapper = document.createElement('div');
-                    contentWrapper.className = 'pub-content-wrapper';
+                    contentWrapper.className = 'pub-content-wrapper flex-grow'; // 让文字区域占据剩余空间
 
                     // --- Line 1: [Venue] Title ---
                     const line1 = document.createElement('div');
                     line1.className = 'pub-line-1';
 
-                    // Venue Tag
                     const venueTagSpan = document.createElement('span');
                     const venueShort = getVenueShortName(pub.venue, pub.year);
                     venueTagSpan.textContent = `[${venueShort}]`;
@@ -230,13 +230,12 @@ function loadPublications() {
                     }
                     line1.appendChild(venueTagSpan);
 
-                    // Title (Text only, no link on title itself)
                     const titleSpan = document.createElement('span');
                     titleSpan.className = 'pub-title-text';
                     titleSpan.textContent = pub.title;
                     line1.appendChild(titleSpan);
                     
-                    // Paper/Code Buttons (Existing Tags)
+                    // Paper/Code Buttons
                     if (pub.tags) {
                         pub.tags.forEach(tag => {
                             if (tag.link && tag.link !== '#') {
@@ -244,20 +243,17 @@ function loadPublications() {
                                 btn.className = 'pub-link-btn';
                                 btn.href = tag.link;
                                 btn.target = '_blank';
-                                
-                                // Customize text/icon based on tag type
                                 if (tag.text === 'Paper') {
                                     btn.textContent = 'PDF';
                                 } else {
                                     btn.textContent = tag.text;
                                 }
-                                
                                 line1.appendChild(btn);
                             }
                         });
                     }
 
-                    // --- 1. 新增 BibTeX 逻辑 ---
+                    // --- BibTeX Button Logic ---
                     let bibBox = null;
                     if (pub.bibtex) {
                         const btnBib = document.createElement('button');
@@ -266,11 +262,42 @@ function loadPublications() {
                         
                         // 创建 BibTeX 显示容器
                         bibBox = document.createElement('div');
-                        // 使用 Tailwind 类美化：默认隐藏，灰色背景，等宽字体
-                        bibBox.className = 'pub-bibtex-box hidden mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs font-mono text-slate-600 whitespace-pre-wrap break-all select-all';
-                        bibBox.textContent = pub.bibtex;
+                        // 样式修改重点：
+                        // 1. relative: 为了里面放绝对定位的复制按钮
+                        // 2. w-full: 占满整行宽度
+                        // 3. whitespace-pre-wrap: 自动换行，禁止横向滚动
+                        // 4. break-all: 强制打断长单词，防止溢出
+                        bibBox.className = 'pub-bibtex-box hidden relative w-full mt-2 p-4 bg-slate-50 border border-slate-200 rounded-lg text-xs font-mono text-slate-600 whitespace-pre-wrap break-all';
+                        
+                        // BibText 内容
+                        const codeContent = document.createElement('div');
+                        codeContent.textContent = pub.bibtex;
+                        bibBox.appendChild(codeContent);
 
-                        // 点击事件：切换显示/隐藏
+                        // --- 创建复制按钮 ---
+                        const copyBtn = document.createElement('button');
+                        // 定位到右上角
+                        copyBtn.className = 'absolute top-2 right-2 p-1.5 text-slate-400 hover:text-accent transition-colors bg-white/50 rounded hover:bg-white';
+                        copyBtn.title = 'Copy BibTeX';
+                        copyBtn.innerHTML = '<i class="far fa-copy"></i>'; // 使用 FontAwesome 图标
+
+                        // 复制功能逻辑
+                        copyBtn.onclick = function(e) {
+                            e.stopPropagation(); // 防止触发其他点击事件
+                            navigator.clipboard.writeText(pub.bibtex).then(() => {
+                                // 复制成功的反馈效果
+                                const originalIcon = copyBtn.innerHTML;
+                                copyBtn.innerHTML = '<i class="fas fa-check text-green-500"></i>';
+                                setTimeout(() => {
+                                    copyBtn.innerHTML = originalIcon;
+                                }, 2000);
+                            }).catch(err => {
+                                console.error('Failed to copy: ', err);
+                            });
+                        };
+                        bibBox.appendChild(copyBtn);
+
+                        // 点击 Toggle 显示/隐藏
                         btnBib.onclick = function() {
                             if (bibBox.classList.contains('hidden')) {
                                 bibBox.classList.remove('hidden');
@@ -284,16 +311,14 @@ function loadPublications() {
                         line1.appendChild(btnBib);
                     }
 
-                    // --- 2. 修改 Thumbnail 逻辑 (默认显示，无按钮) ---
+                    // --- Thumbnail Logic (Default Show) ---
                     let thumbBox = null;
                     if (pub.thumbnail) {
-                        // 必须保留这个 class，用于布局
                         li.classList.add('with-thumbnail-expanded');
 
-                        // 直接创建图片容器，不创建按钮
                         thumbBox = document.createElement('div');
-                        thumbBox.className = 'pub-thumbnail-box';
-                        thumbBox.style.display = 'block'; // 默认直接显示
+                        thumbBox.className = 'pub-thumbnail-box flex-shrink-0'; // 防止图片被压缩
+                        thumbBox.style.display = 'block';
                         
                         const thumbImg = document.createElement('img');
                         thumbImg.src = pub.thumbnail;
@@ -306,14 +331,13 @@ function loadPublications() {
                     // --- Line 2: Authors ---
                     const line2 = document.createElement('div');
                     line2.className = 'pub-line-2';
-                    line2.innerHTML = pub.authors; // keep innerHTML for <strong>/<u>
+                    line2.innerHTML = pub.authors; 
                     contentWrapper.appendChild(line2);
 
                     // --- Line 3: Venue Details ---
                     const line3 = document.createElement('div');
                     line3.className = 'pub-line-3';
                     
-                    // 1. Badge (Oral/Spotlight)
                     let highlightText = pub.highlight || '';
                     let badgeText = '';
                     if (highlightText.toLowerCase().includes('oral')) badgeText = 'Oral';
@@ -326,13 +350,11 @@ function loadPublications() {
                         line3.appendChild(badge);
                     }
 
-                    // 2. Full Venue Name
                     const fullVenueName = getVenueFullName(pub.venue, pub.year);
                     const venueNameSpan = document.createElement('span');
                     venueNameSpan.textContent = fullVenueName;
                     line3.appendChild(venueNameSpan);
 
-                    // 3. CCF Rank
                     const ccfRank = getCCFRank(fullVenueName, pub.venue);
                     if (ccfRank) {
                         const rankSpan = document.createElement('span');
@@ -343,17 +365,22 @@ function loadPublications() {
 
                     contentWrapper.appendChild(line3);
                     
-                    // 3. 将各个部分加入到 LI 中
-                    li.appendChild(contentWrapper);
+                    // --- 组装 DOM 结构 ---
                     
-                    // 如果有 BibTeX，加入 LI (通常在文字下方)
-                    if (bibBox) {
-                        li.appendChild(bibBox);
+                    // 1. 把文字内容加入第一行容器
+                    mainRow.appendChild(contentWrapper);
+
+                    // 2. 如果有图片，把图片加入第一行容器 (放在右侧)
+                    if (thumbBox) {
+                        mainRow.appendChild(thumbBox);
                     }
 
-                    // 如果有图片，加入 LI (通常在右侧)
-                    if (thumbBox) {
-                        li.appendChild(thumbBox);
+                    // 3. 把第一行容器加入 LI
+                    li.appendChild(mainRow);
+                    
+                    // 4. 如果有 BibTeX，把它加入 LI (作为第二行，位于下方)
+                    if (bibBox) {
+                        li.appendChild(bibBox);
                     }
 
                     ul.appendChild(li);
