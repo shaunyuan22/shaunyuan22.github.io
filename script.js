@@ -355,7 +355,7 @@ function getVenueShortName(venueStr, year) {
     let suffix = '';
     
     // Check if it is a conference that needs year suffix
-    const conferences = ['NeurIPS', 'CVPR', 'ICCV', 'ECCV', 'ICRA', 'AAAI', 'GLOBECOM', 'INFOCOM', 'MOBICOM'];
+    const conferences = ['NeurIPS', 'CVPR', 'ICCV', 'ECCV', 'ICRA', 'ICML', 'AAAI', 'GLOBECOM', 'INFOCOM', 'MOBICOM'];
     for (const conf of conferences) {
         if (s.includes(conf)) {
             // Get last two digits of year
@@ -378,7 +378,12 @@ function getVenueShortName(venueStr, year) {
     if (s.includes('JSAC')) return 'IEEE JSAC';
     if (s.includes('TGCN')) return 'IEEE TGCN';
     if (s.includes('LNET')) return 'IEEE LNET';
-    if (s.includes('TNSE')) return 'IEEE TNSE';
+    if (s.includes('TPAMI')) return 'IEEE TPAMI';
+    if (s.includes('TIP')) return 'IEEE TIP';
+    if (s.includes('TCSVT')) return 'IEEE TCSVT';
+    if (s.includes('TGRS')) return 'IEEE TGRS';
+    if (s.includes('IJCV')) return 'IJCV';
+    if (s.includes('PR')) return 'PR';
     if (s.includes('IOTJ') || s.includes('IoTJ')) return 'IEEE IoTJ';
 
     return s;
