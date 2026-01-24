@@ -423,7 +423,7 @@ function getVenueFullName(venueStr, year) {
     if (s.includes('CVPR')) return `IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR${yearSuffix})`;
     if (s.includes('ICCV')) return `IEEE/CVF International Conference on Computer Vision (ICCV${yearSuffix})`;
     if (s.includes('ECCV')) return `European Conference on Computer Vision (ECCV${yearSuffix})`;
-    if (s.includes('ICML')) return `International Conference on Machine Learning (ICML{yearSuffix})`;
+    if (s.includes('ICML')) return `International Conference on Machine Learning (ICML${yearSuffix})`;
     if (s.includes('AAAI')) return `AAAI Conference on Artificial Intelligence (AAAI${yearSuffix})`;
     if (s.includes('ECCV')) return `European Conference on Computer Vision (ECCV{yearSuffix})`;
     if (s.includes('INFOCOM')) return `IEEE International Conference on Computer Communications (INFOCOM${yearSuffix})`;
