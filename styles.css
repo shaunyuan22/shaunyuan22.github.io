@@ -219,7 +219,7 @@ details summary {
 }
 
 .tag-conference {
-    color: #dc2626; /* Red for Conference/Journal */
+    color: #7289EA; /* Red for Conference/Journal */
 }
 
 .pub-title-link {
@@ -302,7 +302,7 @@ details summary {
 }
 
 .ccf-a {
-    color: #16a34a; /* Green-600 */
+    color: #FF7C80; /* Green-600 */
 }
 
 .ccf-b {
@@ -310,7 +310,7 @@ details summary {
 }
 
 .ccf-c {
-    color: #dc2626; /* Red-600 */
+    color: #16a34a; /* Green-600 */
 }
 
 .publication:hover {
