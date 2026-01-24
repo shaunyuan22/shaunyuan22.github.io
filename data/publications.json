@@ -28,7 +28,7 @@
   {
     "title": "Unc-SOD: An Uncertainty Learning Framework for Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Jiacheng Cheng, Ruixiang Yao, Junwei Han",
-    "venue": "TIP 2026",
+    "venue": "TIP",
     "year": "2026",
     "thumbnail": "assets/publications/placeholder/paper-thumb.png",
     "tags": [
@@ -39,7 +39,7 @@
   {
     "title": "Weakly Supervised Object Detection for Aerial Images with Instance-aware Label Assignment",
     "authors": "Xuan Xie, <strong>Xiang Yuan</strong>, Gong Cheng",
-    "venue": "TCSVT 2025",
+    "venue": "TCSVT",
     "year": "2025",
     "thumbnail": "assets/publications/placeholder/paper-thumb.png",
     "tags": [
@@ -61,7 +61,7 @@
   {
     "title": "Semantic Differentiation Aids Oriented Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Ruixiang Yao,Junwei Han",
-    "venue": "TCSVT 2025",
+    "venue": "TCSVT",
     "year": "2025",
     "thumbnail": "assets/publications/placeholder/paper-thumb.png",
     "tags": [
@@ -84,7 +84,7 @@
   {
     "title": "Towards Large-Scale Small Object Detection: Survey and Benchmarks",
     "authors": "Gong Cheng, <strong>Xiang Yuan</strong>, Xiwen Yao, Kebing Yan, Qinghua Zeng, Xingxing Xie, Junwei Han",
-    "venue": "TPAMI 2023",
+    "venue": "TPAMI",
     "year": "2023",
     "highlight": "ESI Hot",
     "thumbnail": "assets/publications/placeholder/paper-thumb.png",
