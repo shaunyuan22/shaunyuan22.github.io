@@ -236,7 +236,7 @@ function loadPublications() {
                     titleSpan.textContent = pub.title;
                     line1.appendChild(titleSpan);
                     
-                    // Paper/Code Buttons
+                    // Paper/Code Buttons (Existing Tags)
                     if (pub.tags) {
                         pub.tags.forEach(tag => {
                             if (tag.link && tag.link !== '#') {
@@ -257,41 +257,49 @@ function loadPublications() {
                         });
                     }
 
-                    // --- 修改开始: Thumbnail 逻辑 (默认显示) ---
+                    // --- 1. 新增 BibTeX 逻辑 ---
+                    let bibBox = null;
+                    if (pub.bibtex) {
+                        const btnBib = document.createElement('button');
+                        btnBib.className = 'pub-link-btn'; 
+                        btnBib.textContent = 'Bib';
+                        
+                        // 创建 BibTeX 显示容器
+                        bibBox = document.createElement('div');
+                        // 使用 Tailwind 类美化：默认隐藏，灰色背景，等宽字体
+                        bibBox.className = 'pub-bibtex-box hidden mt-2 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs font-mono text-slate-600 whitespace-pre-wrap break-all select-all';
+                        bibBox.textContent = pub.bibtex;
+
+                        // 点击事件：切换显示/隐藏
+                        btnBib.onclick = function() {
+                            if (bibBox.classList.contains('hidden')) {
+                                bibBox.classList.remove('hidden');
+                                btnBib.classList.add('active');
+                            } else {
+                                bibBox.classList.add('hidden');
+                                btnBib.classList.remove('active');
+                            }
+                        };
+                        
+                        line1.appendChild(btnBib);
+                    }
+
+                    // --- 2. 修改 Thumbnail 逻辑 (默认显示，无按钮) ---
                     let thumbBox = null;
                     if (pub.thumbnail) {
-                        // 1. 给 li 添加默认展开状态
+                        // 必须保留这个 class，用于布局
                         li.classList.add('with-thumbnail-expanded');
 
-                        // const btnPreview = document.createElement('button');
-                        // // 2. 按钮默认添加 active 类
-                        // btnPreview.className = 'pub-link-btn pub-btn-preview active';
-                        // btnPreview.textContent = 'Image';
-                        // btnPreview.onclick = function() {
-                        //     if (li.classList.contains('with-thumbnail-expanded')) {
-                        //         li.classList.remove('with-thumbnail-expanded');
-                        //         thumbBox.style.display = 'none';
-                        //         btnPreview.classList.remove('active');
-                        //     } else {
-                        //         li.classList.add('with-thumbnail-expanded');
-                        //         thumbBox.style.display = 'block';
-                        //         btnPreview.classList.add('active');
-                        //     }
-                        // };
-                        // line1.appendChild(btnPreview);
-
-                        // Create thumbnail container
+                        // 直接创建图片容器，不创建按钮
                         thumbBox = document.createElement('div');
                         thumbBox.className = 'pub-thumbnail-box';
-                        // 3. 样式默认设为 block (显示)
-                        thumbBox.style.display = 'block';
+                        thumbBox.style.display = 'block'; // 默认直接显示
                         
                         const thumbImg = document.createElement('img');
                         thumbImg.src = pub.thumbnail;
                         thumbImg.alt = 'Publication Thumbnail';
                         thumbBox.appendChild(thumbImg);
                     }
-                    // --- 修改结束 ---
                     
                     contentWrapper.appendChild(line1);
 
@@ -305,7 +313,7 @@ function loadPublications() {
                     const line3 = document.createElement('div');
                     line3.className = 'pub-line-3';
                     
-                    // 1. Badge (Oral/Spotlight) - Red Box at start
+                    // 1. Badge (Oral/Spotlight)
                     let highlightText = pub.highlight || '';
                     let badgeText = '';
                     if (highlightText.toLowerCase().includes('oral')) badgeText = 'Oral';
@@ -318,7 +326,7 @@ function loadPublications() {
                         line3.appendChild(badge);
                     }
 
-                    // 2. Full Venue Name (No Year for Journals)
+                    // 2. Full Venue Name
                     const fullVenueName = getVenueFullName(pub.venue, pub.year);
                     const venueNameSpan = document.createElement('span');
                     venueNameSpan.textContent = fullVenueName;
@@ -335,8 +343,15 @@ function loadPublications() {
 
                     contentWrapper.appendChild(line3);
                     
-                    // Append wrapper and thumbnail box to LI
+                    // 3. 将各个部分加入到 LI 中
                     li.appendChild(contentWrapper);
+                    
+                    // 如果有 BibTeX，加入 LI (通常在文字下方)
+                    if (bibBox) {
+                        li.appendChild(bibBox);
+                    }
+
+                    // 如果有图片，加入 LI (通常在右侧)
                     if (thumbBox) {
                         li.appendChild(thumbBox);
                     }
