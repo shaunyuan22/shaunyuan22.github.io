@@ -1,31 +1,5 @@
 [
   {
-    "title": "AcaNova-X: A Modern and Elegant Academic Website Template",
-    "authors": "<strong>Your Name</strong>, Collaborator A, Collaborator B",
-    "venue": "CVPR 2025",
-    "year": "2025",
-    "highlight": "Oral",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
-    "tags": [
-      { "text": "Paper", "link": "#" },
-      { "text": "Code", "link": "#" },
-      { "text": "Project Page", "link": "#" }
-    ]
-  },
-  {
-    "title": "AcaNova-X: A Modern and Elegant Academic Website Template",
-    "authors": "<strong>Your Name</strong>, Collaborator A, Collaborator B",
-    "venue": "ICCV 2025",
-    "year": "2025",
-    "highlight": "Oral",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
-    "tags": [
-      { "text": "Paper", "link": "#" },
-      { "text": "Code", "link": "#" },
-      { "text": "Project Page", "link": "#" }
-    ]
-  },
-  {
     "title": "Unc-SOD: An Uncertainty Learning Framework for Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Jiacheng Cheng, Ruixiang Yao, Junwei Han",
     "venue": "TIP",
@@ -43,7 +17,7 @@
     "year": "2025",
     "thumbnail": "assets/publications/placeholder/paper-thumb.png",
     "tags": [
-      { "text": "Paper", "link": "https://openreview.net/pdf?id=Cr9qfD3qRc" },
+      { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11162674" },
       { "text": "Code", "link": "#" }
     ]
   },
@@ -54,7 +28,7 @@
     "year": "2025",
     "thumbnail": "assets/publications/placeholder/paper-thumb.png",
     "tags": [
-      { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11162674" },
+      { "text": "Paper", "link": "https://openreview.net/pdf?id=Cr9qfD3qRc" },
       { "text": "Code", "link": "#" }
     ]
   },
