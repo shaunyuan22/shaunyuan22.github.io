@@ -263,22 +263,22 @@ function loadPublications() {
                         // 1. 给 li 添加默认展开状态
                         li.classList.add('with-thumbnail-expanded');
 
-                        const btnPreview = document.createElement('button');
-                        // 2. 按钮默认添加 active 类
-                        btnPreview.className = 'pub-link-btn pub-btn-preview active';
-                        btnPreview.textContent = 'Image';
-                        btnPreview.onclick = function() {
-                            if (li.classList.contains('with-thumbnail-expanded')) {
-                                li.classList.remove('with-thumbnail-expanded');
-                                thumbBox.style.display = 'none';
-                                btnPreview.classList.remove('active');
-                            } else {
-                                li.classList.add('with-thumbnail-expanded');
-                                thumbBox.style.display = 'block';
-                                btnPreview.classList.add('active');
-                            }
-                        };
-                        line1.appendChild(btnPreview);
+                        // const btnPreview = document.createElement('button');
+                        // // 2. 按钮默认添加 active 类
+                        // btnPreview.className = 'pub-link-btn pub-btn-preview active';
+                        // btnPreview.textContent = 'Image';
+                        // btnPreview.onclick = function() {
+                        //     if (li.classList.contains('with-thumbnail-expanded')) {
+                        //         li.classList.remove('with-thumbnail-expanded');
+                        //         thumbBox.style.display = 'none';
+                        //         btnPreview.classList.remove('active');
+                        //     } else {
+                        //         li.classList.add('with-thumbnail-expanded');
+                        //         thumbBox.style.display = 'block';
+                        //         btnPreview.classList.add('active');
+                        //     }
+                        // };
+                        // line1.appendChild(btnPreview);
 
                         // Create thumbnail container
                         thumbBox = document.createElement('div');
