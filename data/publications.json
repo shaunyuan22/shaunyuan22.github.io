@@ -9,7 +9,7 @@
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11361337" },
       { "text": "Code", "link": "#" }
     ],
-    "bibtex": "@inproceedings{yuan2025acanova,\n  title={AcaNova-X: A Modern and Elegant Academic Website Template},\n  author={Yuan, Xiang and Others},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2025}\n}"
+    "bibtex": "@ARTICLE{uncsod,\n  author={Yuan, Xiang and Cheng, Gong and Cheng, Jiacheng and Yao, Ruixiang and Han, Junwei},\n  journal={IEEE Transactions on Image Processing}, \n  title={Unc-SOD: An Uncertainty Learning Framework for Small Object Detection}, \n  year={2026},\n  volume={},\n  number={},\n  pages={1-1},\n  doi={10.1109/TIP.2026.3654892}\n}"
   },
   {
     "title": "Weakly Supervised Object Detection for Aerial Images with Instance-aware Label Assignment",
@@ -20,7 +20,8 @@
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11162674" },
       { "text": "Code", "link": "#" }
-    ]
+    ],
+    "bibtex": "@ARTICLE{ila,\n  author={Xie, Xuan and Yuan, Xiang and Cheng, Gong},\n  journal={IEEE Transactions on Circuits and Systems for Video Technology}, \n  title={Weakly Supervised Object Detection for Aerial Images with Instance-aware Label Assignment}, \n  year={2025},\n  volume={},\n  number={},\n  pages={1-1},\n  doi={10.1109/TCSVT.2025.3609322}\n}"
   },
   {
     "title": "Not All Tokens Matter All The Time: Dynamic Token Aggregation Towards Efficient Detection Transformers",
@@ -31,7 +32,8 @@
     "tags": [
       { "text": "Paper", "link": "https://openreview.net/pdf?id=Cr9qfD3qRc" },
       { "text": "Code", "link": "#" }
-    ]
+    ],
+    "bibtex": "@InProceedings{dydetr,\n  title = {Not All Tokens Matter All The Time: Dynamic Token Aggregation Towards Efficient Detection Transformers},\n  author = {Cheng, Jiacheng and Yao, Xiwen and Yuan, Xiang and Han, Junwei},\n  booktitle = {Proceedings of the 42nd International Conference on Machine Learning},\n  pages = {10144--10158},\n  year = {2025},\n  editor = {Singh, Aarti and Fazel, Maryam and Hsu, Daniel and Lacoste-Julien, Simon and Berkenkamp, Felix and Maharaj, Tegan and Wagstaff, Kiri and Zhu, Jerry},\n  volume = {267},\n  series = {Proceedings of Machine Learning Research},\n  month = {13--19 Jul},\n  publisher = {PMLR}\n}"
   },
   {
     "title": "Semantic Differentiation Aids Oriented Small Object Detection",
@@ -42,19 +44,20 @@
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/10847719" },
       { "text": "Code", "link": "https://github.com/shaunyuan22/SemDiff" }
-    ]
+    ],
+    "bibtex": "@ARTICLE{semdiff,\n  author={Yuan, Xiang and Cheng, Gong and Yao, Ruixiang and Han, Junwei},\n  journal={IEEE Transactions on Circuits and Systems for Video Technology}, \n  title={Semantic Differentiation Aids Oriented Small Object Detection}, \n  year={2025},\n  volume={35},\n  number={6},\n  pages={5966-5979},\n  doi={10.1109/TCSVT.2025.3532243}\n}"
   },
   {
     "title": "Small Object Detection via Coarse-to-fine Proposal Generation and Imitation Learning",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Kebing Yan, Qinghua Zeng, Junwei Han",
     "venue": "ICCV 2023",
     "year": "2023",
-    "highlight": "Poster",
     "thumbnail": "assets/publications/placeholder/iccv-cfinet.png",
     "tags": [
       { "text": "Paper", "link": "https://openaccess.thecvf.com/content/ICCV2023/papers/Yuan_Small_Object_Detection_via_Coarse-to-fine_Proposal_Generation_and_Imitation_Learning_ICCV_2023_paper.pdf" },
       { "text": "Code", "link": "https://github.com/shaunyuan22/CFINet" }
-    ]
+    ],
+    "bibtex": "@InProceedings{cfinet,\n  author    = {Yuan, Xiang and Cheng, Gong and Yan, Kebing and Zeng, Qinghua and Han, Junwei},\n  title     = {Small Object Detection via Coarse-to-fine Proposal Generation and Imitation Learning},\n  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  year      = {2023},\n  pages     = {6317-6327}\n}"
   },
   {
     "title": "Towards Large-Scale Small Object Detection: Survey and Benchmarks",
@@ -66,7 +69,8 @@
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/10168277" },
       { "text": "Project", "link": "https://shaunyuan22.github.io/SODA" }
-    ]
+    ],
+    "bibtex": "@ARTICLE{soda,\n  author={Cheng, Gong and Yuan, Xiang and Yao, Xiwen and Yan, Kebing and Zeng, Qinghua and Xie, Xingxing and Han, Junwei},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, \n  title={Towards Large-Scale Small Object Detection: Survey and Benchmarks}, \n  year={2023},\n  volume={45},\n  number={11},\n  pages={13467-13488},\n  doi={10.1109/TPAMI.2023.3290594}\n}"
   }
 ]
 
