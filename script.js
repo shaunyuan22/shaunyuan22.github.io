@@ -398,6 +398,13 @@ function getVenueFullName(venueStr, year) {
     }
 
     // Journal Full Names Mapping (No Year)
+    if (s.includes('TPAMI')) return 'IEEE Transactions on Pattern Analysis and Machine Intelligence';
+    if (s.includes('TIP')) return 'IEEE Transactions on Image Processing';
+    if (s.includes('TMM')) return 'IEEE Transactions on Multimedia';
+    if (s.includes('TGRS')) return 'IEEE Transactions on Geoscience and Remote Sensing';
+    if (s.includes('TCSVT')) return 'IEEE Transactions on Circuits and Systems for Video Technology';
+    if (s.includes('IJCV')) return 'International Journal of Computer Vision';
+    if (s.includes('PR')) return 'Pattern Recognition';
     if (s.includes('TDSC')) return 'IEEE Transactions on Dependable and Secure Computing';
     if (s.includes('TMC')) return 'IEEE Transactions on Mobile Computing';
     if (s.includes('JSAC')) return 'IEEE Journal on Selected Areas in Communications';
@@ -411,9 +418,9 @@ function getVenueFullName(venueStr, year) {
     if (s.includes('CVPR')) return `IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR${yearSuffix})`;
     if (s.includes('ICCV')) return `IEEE/CVF International Conference on Computer Vision (ICCV${yearSuffix})`;
     if (s.includes('ECCV')) return `European Conference on Computer Vision (ECCV${yearSuffix})`;
-    if (s.includes('ICRA')) return `IEEE International Conference on Robotics and Automation (ICRA${yearSuffix})`;
+    if (s.includes('ICML')) return `International Conference on Machine Learning (ICML{yearSuffix})`;
     if (s.includes('AAAI')) return `AAAI Conference on Artificial Intelligence (AAAI${yearSuffix})`;
-    if (s.includes('GLOBECOM')) return `IEEE Global Communications Conference (GLOBECOM${yearSuffix})`;
+    if (s.includes('ECCV')) return `European Conference on Computer Vision (ECCV{yearSuffix})`;
     if (s.includes('INFOCOM')) return `IEEE International Conference on Computer Communications (INFOCOM${yearSuffix})`;
     if (s.includes('MOBICOM')) return `Annual International Conference on Mobile Computing and Networking (MobiCom${yearSuffix})`;
     
@@ -430,12 +437,14 @@ function getCCFRank(fullName, originalVenue) {
         v.includes('tmc') || v.includes('mobile computing') || 
         v.includes('aaai') || v.includes('neurips') || 
         v.includes('cvpr') || v.includes('iccv') || 
+        v.includes('icml') || v.includes('ijcv') || 
+        v.includes('tpami') || v.includes('tip') || 
         v.includes('infocom') || v.includes('jsac')) {
         return 'A';
     }
     
     // CCF-B
-    if (v.includes('icra')) {
+    if (v.includes('icra') || v.includes('eccv')) {
         return 'B';
     }
     
