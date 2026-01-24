@@ -468,15 +468,13 @@ function getVenueFullName(venueStr, year) {
     if (s.includes('LNET') || s.includes('LNet')) return 'IEEE Networking Letters';
     
     // Conference Full Names Mapping (With Year Suffix)
-    if (s.includes('NeurIPS')) return `Annual Conference on Neural Information Processing Systems (NeurIPS${yearSuffix})`;
-    if (s.includes('CVPR')) return `IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR${yearSuffix})`;
-    if (s.includes('ICCV')) return `IEEE/CVF International Conference on Computer Vision (ICCV${yearSuffix})`;
-    if (s.includes('ECCV')) return `European Conference on Computer Vision (ECCV${yearSuffix})`;
-    if (s.includes('ICML')) return `International Conference on Machine Learning (ICML${yearSuffix})`;
-    if (s.includes('AAAI')) return `AAAI Conference on Artificial Intelligence (AAAI${yearSuffix})`;
-    if (s.includes('ECCV')) return `European Conference on Computer Vision (ECCV{yearSuffix})`;
-    if (s.includes('INFOCOM')) return `IEEE International Conference on Computer Communications (INFOCOM${yearSuffix})`;
-    if (s.includes('MOBICOM')) return `Annual International Conference on Mobile Computing and Networking (MobiCom${yearSuffix})`;
+    if (s.includes('NeurIPS')) return `Annual Conference on Neural Information Processing Systems`;
+    if (s.includes('CVPR')) return `IEEE/CVF Conference on Computer Vision and Pattern Recognition`;
+    if (s.includes('ICCV')) return `IEEE/CVF International Conference on Computer Vision`;
+    if (s.includes('ECCV')) return `European Conference on Computer Vision`;
+    if (s.includes('ICML')) return `International Conference on Machine Learning`;
+    if (s.includes('AAAI')) return `AAAI Conference on Artificial Intelligence`;
+    if (s.includes('ECCV')) return `European Conference on Computer Vision`;
     
     if (s.toLowerCase().includes('arxiv')) return 'arXiv preprint';
     
