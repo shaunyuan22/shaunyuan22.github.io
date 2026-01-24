@@ -1,14 +1,7 @@
 [
   {
-    "date": "2025-01-01",
-    "content": "Welcome to my new academic homepage! This template is available on GitHub.",
-    "links": [
-        { "text": "GitHub", "url": "https://github.com/yihangtao/AcaNova-X" }
-    ]
-  },
-  {
-     "date": "2024-12-15",
-     "content": "One paper titled 'A Novel Approach to AI' was accepted to CVPR 2025!",
+     "date": "2026-01",
+     "content": "One paper titled 'Unc-SOD: An Uncertainty Learning Framework for Small Object Detection' was accepted to TIP!",
      "links": []
   }
 ]
