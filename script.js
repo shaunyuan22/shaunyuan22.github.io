@@ -257,11 +257,15 @@ function loadPublications() {
                         });
                     }
 
-                    // Thumbnail Preview Button (if thumbnail exists)
+                    // --- 修改开始: Thumbnail 逻辑 (默认显示) ---
                     let thumbBox = null;
                     if (pub.thumbnail) {
+                        // 1. 给 li 添加默认展开状态
+                        li.classList.add('with-thumbnail-expanded');
+
                         const btnPreview = document.createElement('button');
-                        btnPreview.className = 'pub-link-btn pub-btn-preview';
+                        // 2. 按钮默认添加 active 类
+                        btnPreview.className = 'pub-link-btn pub-btn-preview active';
                         btnPreview.textContent = 'Image';
                         btnPreview.onclick = function() {
                             if (li.classList.contains('with-thumbnail-expanded')) {
@@ -279,12 +283,15 @@ function loadPublications() {
                         // Create thumbnail container
                         thumbBox = document.createElement('div');
                         thumbBox.className = 'pub-thumbnail-box';
-                        thumbBox.style.display = 'none';
+                        // 3. 样式默认设为 block (显示)
+                        thumbBox.style.display = 'block';
+                        
                         const thumbImg = document.createElement('img');
                         thumbImg.src = pub.thumbnail;
                         thumbImg.alt = 'Publication Thumbnail';
                         thumbBox.appendChild(thumbImg);
                     }
+                    // --- 修改结束 ---
                     
                     contentWrapper.appendChild(line1);
 
