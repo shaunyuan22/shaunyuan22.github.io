@@ -4,18 +4,19 @@
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Jiacheng Cheng, Ruixiang Yao, Junwei Han",
     "venue": "TIP",
     "year": "2026",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "thumbnail": "assets/publications/placeholder/tip-uncsod.png",
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11361337" },
       { "text": "Code", "link": "#" }
-    ]
+    ],
+    "bibtex": "@inproceedings{yuan2025acanova,\n  title={AcaNova-X: A Modern and Elegant Academic Website Template},\n  author={Yuan, Xiang and Others},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2025}\n}"
   },
   {
     "title": "Weakly Supervised Object Detection for Aerial Images with Instance-aware Label Assignment",
     "authors": "Xuan Xie, <strong>Xiang Yuan</strong>, Gong Cheng",
     "venue": "TCSVT",
     "year": "2025",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "thumbnail": "assets/publications/placeholder/tcsvt-ila.png",
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11162674" },
       { "text": "Code", "link": "#" }
@@ -26,7 +27,7 @@
     "authors": "Jiacheng Cheng, Xiwen Yao, <strong>Xiang Yuan</strong>, Junwei Han",
     "venue": "ICML 2025",
     "year": "2025",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "thumbnail": "assets/publications/placeholder/icml-dydetr.png",
     "tags": [
       { "text": "Paper", "link": "https://openreview.net/pdf?id=Cr9qfD3qRc" },
       { "text": "Code", "link": "#" }
@@ -37,7 +38,7 @@
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Ruixiang Yao,Junwei Han",
     "venue": "TCSVT",
     "year": "2025",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "thumbnail": "assets/publications/placeholder/tcsvt-semdiff.png",
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/10847719" },
       { "text": "Code", "link": "https://github.com/shaunyuan22/SemDiff" }
@@ -49,7 +50,7 @@
     "venue": "ICCV 2023",
     "year": "2023",
     "highlight": "Poster",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "thumbnail": "assets/publications/placeholder/iccv-cfinet.png",
     "tags": [
       { "text": "Paper", "link": "https://openaccess.thecvf.com/content/ICCV2023/papers/Yuan_Small_Object_Detection_via_Coarse-to-fine_Proposal_Generation_and_Imitation_Learning_ICCV_2023_paper.pdf" },
       { "text": "Code", "link": "https://github.com/shaunyuan22/CFINet" }
@@ -61,7 +62,7 @@
     "venue": "TPAMI",
     "year": "2023",
     "highlight": "ESI Hot",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "thumbnail": "assets/publications/placeholder/tpami-soda.png",
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/10168277" },
       { "text": "Project", "link": "https://shaunyuan22.github.io/SODA" }
