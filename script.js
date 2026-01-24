@@ -257,18 +257,17 @@ function loadPublications() {
                         });
                     }
 
-                    // Thumbnail Preview Button (if thumbnail exists)
+                    // --- 修改开始: Thumbnail 逻辑 (默认显示) ---
                     let thumbBox = null;
                     if (pub.thumbnail) {
-                        // 1. 【新增】给 li 添加默认展开的 class
+                        // 1. 给 li 添加默认展开状态
                         li.classList.add('with-thumbnail-expanded');
 
                         const btnPreview = document.createElement('button');
-                        // 2. 【修改】给按钮 class 加上 active，让它显示为深色激活状态
-                        btnPreview.className = 'pub-link-btn pub-btn-preview active'; 
+                        // 2. 按钮默认添加 active 类
+                        btnPreview.className = 'pub-link-btn pub-btn-preview active';
                         btnPreview.textContent = 'Image';
                         btnPreview.onclick = function() {
-                            // 点击逻辑不用变，因为我们修改了初始状态，第一次点击就会触发 if (contains...) 从而折叠
                             if (li.classList.contains('with-thumbnail-expanded')) {
                                 li.classList.remove('with-thumbnail-expanded');
                                 thumbBox.style.display = 'none';
@@ -284,14 +283,15 @@ function loadPublications() {
                         // Create thumbnail container
                         thumbBox = document.createElement('div');
                         thumbBox.className = 'pub-thumbnail-box';
-                        // 3. 【修改】这里改成 block，让图片默认直接显示
-                        thumbBox.style.display = 'block'; 
+                        // 3. 样式默认设为 block (显示)
+                        thumbBox.style.display = 'block';
                         
                         const thumbImg = document.createElement('img');
                         thumbImg.src = pub.thumbnail;
                         thumbImg.alt = 'Publication Thumbnail';
                         thumbBox.appendChild(thumbImg);
                     }
+                    // --- 修改结束 ---
                     
                     contentWrapper.appendChild(line1);
 
