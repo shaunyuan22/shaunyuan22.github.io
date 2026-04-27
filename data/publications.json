@@ -1,5 +1,17 @@
 [
   {
+    "title": "Cheaper Clicks From Boxes: Cyclic Querying for Interactive Small Object Detection",
+    "authors": "<strong>Xiang Yuan</strong>, Ruixiang Yao, Gong Cheng, Junwei Han",
+    "venue": "TGRS",
+    "year": "2026",
+    "thumbnail": "assets/publications/placeholder/tgrs-cliq.png",
+    "tags": [
+      { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11456730" },
+      { "text": "Code", "link": "https://github.com/shaunyuan22/CLIQ" }
+    ],
+    "bibtex": "@ARTICLE{cliq,\n  author={Yuan, Xiang and Yao, Ruixiang and Han, Junwei and Cheng, Gong},\n  journal={IEEE Transactions on Geoscience and Remote Sensing}, \n  title={Cheaper Clicks From Boxes: Cyclic Querying for Interactive Small Object Detection}, \n  year={2026},\n  volume={64},\n  number={},\n  pages={1-11},\n  doi={10.1109/TGRS.2026.3677820}\n}"
+  },
+  {
     "title": "Unc-SOD: An Uncertainty Learning Framework for Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Jiacheng Cheng, Ruixiang Yao, Junwei Han",
     "venue": "TIP",
