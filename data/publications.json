@@ -3,7 +3,7 @@
 		"title": "Breathing New Life into Small Object Detection with Detection-Oriented Rectification",
 		"authors": "<strong>Xiang Yuan</strong>, Junwei Han, Gong Cheng",
 		"venue": "TPAMI",
-		"year": "2026",
+		"year": 2026,
 		"thumbnail": "assets/publications/placeholder/tpami-dora.png",
 		"tags": [
 			{ "text": "Paper", "link": "#" },
@@ -14,7 +14,7 @@
     "title": "Cheaper Clicks From Boxes: Cyclic Querying for Interactive Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Ruixiang Yao, Gong Cheng, Junwei Han",
     "venue": "TGRS",
-    "year": "2026",
+    "year": 2026,
     "thumbnail": "assets/publications/placeholder/tgrs-cliq.png",
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11456730" },
@@ -26,7 +26,7 @@
     "title": "Unc-SOD: An Uncertainty Learning Framework for Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Jiacheng Cheng, Ruixiang Yao, Junwei Han",
     "venue": "TIP",
-    "year": "2026",
+    "year": 2026,
     "thumbnail": "assets/publications/placeholder/tip-uncsod.png",
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11361337" },
@@ -38,7 +38,7 @@
     "title": "Weakly Supervised Object Detection for Aerial Images with Instance-aware Label Assignment",
     "authors": "Xuan Xie, <strong>Xiang Yuan</strong>, Gong Cheng",
     "venue": "TCSVT",
-    "year": "2025",
+    "year": 2025,
     "thumbnail": "assets/publications/placeholder/tcsvt-ila.png",
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11162674" },
@@ -50,7 +50,7 @@
     "title": "Not All Tokens Matter All The Time: Dynamic Token Aggregation Towards Efficient Detection Transformers",
     "authors": "Jiacheng Cheng, Xiwen Yao, <strong>Xiang Yuan</strong>, Junwei Han",
     "venue": "ICML 2025",
-    "year": "2025",
+    "year": 2025,
     "thumbnail": "assets/publications/placeholder/icml-dydetr.png",
     "tags": [
       { "text": "Paper", "link": "https://openreview.net/pdf?id=Cr9qfD3qRc" },
@@ -62,7 +62,7 @@
     "title": "Semantic Differentiation Aids Oriented Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Ruixiang Yao,Junwei Han",
     "venue": "TCSVT",
-    "year": "2025",
+    "year": 2025,
     "thumbnail": "assets/publications/placeholder/tcsvt-semdiff.png",
     "tags": [
       { "text": "Paper", "link": "https://ieeexplore.ieee.org/document/10847719" },
@@ -74,7 +74,7 @@
     "title": "Small Object Detection via Coarse-to-fine Proposal Generation and Imitation Learning",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Kebing Yan, Qinghua Zeng, Junwei Han",
     "venue": "ICCV 2023",
-    "year": "2023",
+    "year": 2023,
     "thumbnail": "assets/publications/placeholder/iccv-cfinet.png",
     "tags": [
       { "text": "Paper", "link": "https://openaccess.thecvf.com/content/ICCV2023/papers/Yuan_Small_Object_Detection_via_Coarse-to-fine_Proposal_Generation_and_Imitation_Learning_ICCV_2023_paper.pdf" },
@@ -86,7 +86,7 @@
     "title": "Towards Large-Scale Small Object Detection: Survey and Benchmarks",
     "authors": "Gong Cheng, <strong>Xiang Yuan</strong>, Xiwen Yao, Kebing Yan, Qinghua Zeng, Xingxing Xie, Junwei Han",
     "venue": "TPAMI",
-    "year": "2023",
+    "year": 2023,
     "highlight": "ESI Hot",
     "thumbnail": "assets/publications/placeholder/tpami-soda.png",
     "tags": [
