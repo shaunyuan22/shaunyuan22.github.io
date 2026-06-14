@@ -1,6 +1,11 @@
 [
   {
      "date": "2026-03",
+     "content": "Our paper titled 'Breathing New Life into Small Object Detection with Detection-Oriented Rectification' was accepted to TPAMI!",
+     "links": []
+  },
+  {
+     "date": "2026-03",
      "content": "Our paper titled 'Cheaper Clicks From Boxes: Cyclic Querying for Interactive Small Object Detection' was accepted to TGRS!",
      "links": []
   },
