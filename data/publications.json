@@ -28,7 +28,7 @@
     "authors": "Peng Zhang, <strong>Xiang Yuan</strong>, Gong Cheng",
     "venue": "AAAI 2026",
     "year": 2026,
-    "thumbnail": "assets/publications/placeholder/aaai-uicl.png",
+    "thumbnail": "assets/publications/placeholder/aaai26-uicl.png",
     "tags": [
       { "text": "Paper", "link": "https://ojs.aaai.org/index.php/AAAI/article/view/38263" },
       { "text": "Code", "link": "https://github.com/zhangpeng2001/uicl.git" }
