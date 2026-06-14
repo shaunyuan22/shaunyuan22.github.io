@@ -1,15 +1,16 @@
 [
   {
-		"title": "Breathing New Life into Small Object Detection with Detection-Oriented Rectification",
-		"authors": "<strong>Xiang Yuan</strong>, Junwei Han, Gong Cheng",
-		"venue": "TPAMI",
-		"year": 2026,
-		"thumbnail": "assets/publications/placeholder/tpami-dora.png",
-		"tags": [
-			{ "text": "Paper", "link": "#" },
-			{ "text": "Code", "link": "#" }
-		]
-	}
+	"title": "Breathing New Life into Small Object Detection with Detection-Oriented Rectification",
+	"authors": "<strong>Xiang Yuan</strong>, Junwei Han, Gong Cheng",
+	"venue": "TPAMI",
+	"year": 2026,
+	"thumbnail": "assets/publications/placeholder/tpami-dora.png",
+	"tags": [
+		{ "text": "Paper", "link": "#" },
+		{ "text": "Code", "link": "#" }
+	]
+    "bibtex": "@ARTICLE{dora,\n  author={Yuan, Xiang and Han, Junwei and Cheng, Gong},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, \n  title={Breathing New Life into Small Object Detection with Detection-Oriented Rectification}, \n  year={2026},\n  volume={64},\n  number={},\n  pages={},\n  doi={}\n}"
+  }, 
   {
     "title": "Cheaper Clicks From Boxes: Cyclic Querying for Interactive Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Ruixiang Yao, Gong Cheng, Junwei Han",
