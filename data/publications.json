@@ -24,6 +24,18 @@
     "bibtex": "@ARTICLE{cliq,\n  author={Yuan, Xiang and Yao, Ruixiang and Han, Junwei and Cheng, Gong},\n  journal={IEEE Transactions on Geoscience and Remote Sensing}, \n  title={Cheaper Clicks From Boxes: Cyclic Querying for Interactive Small Object Detection}, \n  year={2026},\n  volume={64},\n  number={},\n  pages={1-11},\n  doi={10.1109/TGRS.2026.3677820}\n}"
   },
   {
+    "title": "Unified Interaction Consistency Learning for Single-Source Domain-Generalized Object Detection in Urban Scene",
+    "authors": "Peng Zhang, <strong>Xiang Yuan</strong>, Gong Cheng",
+    "venue": "AAAI 2026",
+    "year": 2026,
+    "thumbnail": "assets/publications/placeholder/aaai-uicl.png",
+    "tags": [
+      { "text": "Paper", "link": "https://ojs.aaai.org/index.php/AAAI/article/view/38263" },
+      { "text": "Code", "link": "https://github.com/zhangpeng2001/uicl.git" }
+    ],
+    "bibtex": "@INPROCEEDINGS{uicl,\n  author={Zhang, Peng and Yuan, Xiang and Cheng, Gong},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  title={Unified Interaction Consistency Learning for Single-Source Domain-Generalized Object Detection in Urban Scene},\n  year={2026},\n  volume={40},\n  number={15},\n  pages={12672-12680}\n}"
+  },
+  {
     "title": "Unc-SOD: An Uncertainty Learning Framework for Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Jiacheng Cheng, Ruixiang Yao, Junwei Han",
     "venue": "TIP",
