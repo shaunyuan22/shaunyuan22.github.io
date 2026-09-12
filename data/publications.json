@@ -1,12 +1,24 @@
 [
   {
+	"title": "Dual-Path Learning Towards Open-Vocabulary Object Detection in Remote Sensing Images",
+	"authors": "Yanqing Yao*, <strong>Xiang Yuan</strong>*, Gong Cheng",
+	"venue": "TGRS",
+	"year": 2026,
+	"thumbnail": "assets/publications/placeholder/tgrs26-dpnet.png",
+	"tags": [
+		{ "text": "Paper", "link": "#" },
+		{ "text": "Code", "link": "#" }
+	],
+    "bibtex": "@ARTICLE{dpnet,\n  author={Yanqing Yao and Yuan, Xiang and Cheng, Gong},\n  journal={IEEE Transactions on Geoscience and Remote Sensing}, \n  title={Dual-Path Learning Towards Open-Vocabulary Object Detection in Remote Sensing Images}, \n  year={2026},\n  volume={},\n  number={},\n  pages={},\n  doi={}\n}"
+  }, 
+  {
 	"title": "Breathing New Life into Small Object Detection with Detection-Oriented Rectification",
 	"authors": "<strong>Xiang Yuan</strong>, Junwei Han, Gong Cheng",
 	"venue": "TPAMI",
 	"year": 2026,
 	"thumbnail": "assets/publications/placeholder/tpami-dora.png",
 	"tags": [
-		{ "text": "Paper", "link": "#" },
+		{ "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11569333" },
 		{ "text": "Code", "link": "#" }
 	],
     "bibtex": "@ARTICLE{dora,\n  author={Yuan, Xiang and Han, Junwei and Cheng, Gong},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, \n  title={Breathing New Life into Small Object Detection with Detection-Oriented Rectification}, \n  year={2026},\n  volume={},\n  number={},\n  pages={},\n  doi={}\n}"
