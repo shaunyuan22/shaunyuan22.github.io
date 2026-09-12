@@ -21,7 +21,7 @@
 		{ "text": "Paper", "link": "https://ieeexplore.ieee.org/document/11569333" },
 		{ "text": "Code", "link": "#" }
 	],
-    "bibtex": "@ARTICLE{dora,\n  author={Yuan, Xiang and Han, Junwei and Cheng, Gong},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, \n  title={Breathing New Life into Small Object Detection with Detection-Oriented Rectification}, \n  year={2026},\n  volume={},\n  number={},\n  pages={},\n  doi={}\n}"
+    "bibtex": "@ARTICLE{dora,\n  author={Yuan, Xiang and Han, Junwei and Cheng, Gong},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, \n  title={Breathing New Life into Small Object Detection with Detection-Oriented Rectification}, \n  year={2026},\n  volume={48},\n  number={10},\n  pages={13287-13304},\n  doi={10.1109/TPAMI.2026.3704810}\n}"
   }, 
   {
     "title": "Cheaper Clicks From Boxes: Cyclic Querying for Interactive Small Object Detection",
