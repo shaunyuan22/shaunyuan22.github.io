@@ -36,6 +36,17 @@
     "bibtex": "@INPROCEEDINGS{uicl,\n  author={Zhang, Peng and Yuan, Xiang and Cheng, Gong},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  title={Unified Interaction Consistency Learning for Single-Source Domain-Generalized Object Detection in Urban Scene},\n  year={2026},\n  volume={40},\n  number={15},\n  pages={12672-12680}\n}"
   },
   {
+    "title": "PGA: Prior-free Generative Attack for Practical No-box Scenario",
+    "authors": "Hongyu Peng, <strong>Xiang Yuan</strong>, Gong Cheng",
+    "venue": "CVPR 2026",
+    "year": 2026,
+    "thumbnail": "assets/publications/placeholder/cvpr26-pga.png",
+    "tags": [
+      { "text": "Paper", "link": "https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_PGA_Prior-free_Generative_Attack_for_Practical_No-box_Scenario_CVPR_2026_paper.pdf" }
+    ],
+    "bibtex": "@INPROCEEDINGS{pga,\n  author={Peng, Hongyu and Yuan, Xiang and Cheng, Gong},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  title={PGA: Prior-free Generative Attack for Practical No-box Scenario},\n  year={2026},\n  pages={13296-13305}\n}"
+  },
+  {
     "title": "Unc-SOD: An Uncertainty Learning Framework for Small Object Detection",
     "authors": "<strong>Xiang Yuan</strong>, Gong Cheng, Jiacheng Cheng, Ruixiang Yao, Junwei Han",
     "venue": "TIP",
